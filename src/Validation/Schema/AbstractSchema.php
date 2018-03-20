@@ -28,7 +28,9 @@ abstract class AbstractSchema
     public function process(InputValue $input)
     {
         foreach ($this->assertions() as $assertion) {
-            $assertion->process($input);
+            if ($assertion->process($input) === false) {
+                break;
+            };
         }
 
         return $input->getValue();

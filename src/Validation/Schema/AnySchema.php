@@ -50,6 +50,10 @@ class AnySchema extends AbstractSchema
         return $this;
     }
 
+    public function optional() {
+
+    }
+
     /**
      * @return $this
      */
