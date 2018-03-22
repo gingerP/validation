@@ -51,7 +51,9 @@ class AnySchema extends AbstractSchema
     }
 
     public function optional() {
+        $this->assert(new Assertions\Optional());
 
+        return $this;
     }
 
     /**
